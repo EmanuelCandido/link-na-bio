@@ -1,20 +1,20 @@
 // Conteúdo original da página; usado na primeira execução e como base para campos ausentes.
 export const defaultContent = {
   seo: {
-    title: 'Alex Duarte | Personal Trainer',
-    description: 'Transforme seu treino com Alex Duarte. Consultoria online, treino presencial e avaliação física com acompanhamento profissional. CREF 000000-G/UF.'
+    title: 'Rafael Moura | Personal Trainer',
+    description: 'Transforme seu treino com Rafael Moura. Consultoria online, treino presencial e avaliação física com acompanhamento profissional. CREF verificado.'
   },
   profile: {
-    name: 'Alex Duarte',
+    name: 'Rafael Moura',
     role: 'Personal Trainer',
-    cref: 'CREF 000000-G/UF',
+    cref: 'CREF verificado',
     photo: 'assets/personal-hero.jpg',
     photoWebp: 'assets/personal-hero.webp'
   },
   hero: { kicker: 'Transforme seu', word: 'treino', subtitle: 'com acompanhamento profissional!' },
   contact: {
     whatsapp: '5500000000000',
-    message: 'Olá, Alex! Quero conhecer seus serviços e saber qual opção combina com meu objetivo.',
+    message: 'Olá, Rafael! Quero conhecer seus serviços e saber qual opção combina com meu objetivo.',
     instagram: 'https://www.instagram.com/',
     tiktok: ''
   },
@@ -25,7 +25,7 @@ export const defaultContent = {
       title: 'Consultoria Online',
       description: 'Treine de onde estiver\n**com um plano personalizado.**\nAcompanhamento online\npara sua evolução.',
       cta: 'Saiba Mais', menuSubtitle: 'Treine de onde estiver',
-      message: 'Olá, Alex! Tenho interesse na Consultoria Online. Gostaria de saber como funciona o plano personalizado e o acompanhamento.',
+      message: 'Olá, Rafael! Tenho interesse na Consultoria Online. Gostaria de saber como funciona o plano personalizado e o acompanhamento.',
       image: 'assets/consultoria-online.jpg', imageWebp: 'assets/consultoria-online.webp'
     },
     {
@@ -33,7 +33,7 @@ export const defaultContent = {
       title: 'Treino Presencial',
       description: 'Treino personalizado para você\n**com orientação profissional.**\nEvolua no seu ritmo\ne alcance seus objetivos.',
       cta: 'Saiba Mais', menuSubtitle: 'Evolua no seu ritmo',
-      message: 'Olá, Alex! Tenho interesse no Treino Presencial. Gostaria de saber sobre os horários e o treino com orientação profissional.',
+      message: 'Olá, Rafael! Tenho interesse no Treino Presencial. Gostaria de saber sobre os horários e o treino com orientação profissional.',
       image: 'assets/treino-presencial.jpg', imageWebp: 'assets/treino-presencial.webp'
     },
     {
@@ -41,11 +41,11 @@ export const defaultContent = {
       title: 'Avaliação Física',
       description: 'Descubra como está seu corpo hoje\n**e onde você pode chegar.**\nAvalie seus resultados\ne treine com mais estratégia.',
       cta: 'Saiba Mais', menuSubtitle: 'Saiba onde pode chegar',
-      message: 'Olá, Alex! Quero agendar uma Avaliação Física para entender meus resultados e treinar com mais estratégia. Como funciona?',
+      message: 'Olá, Rafael! Quero agendar uma Avaliação Física para entender meus resultados e treinar com mais estratégia. Como funciona?',
       image: 'assets/avaliacao-fisica.jpg', imageWebp: 'assets/avaliacao-fisica.webp'
     }
   ],
-  footer: 'Todos os Direitos Reservados © Alex Duarte'
+  footer: 'Todos os Direitos Reservados © Rafael Moura'
 };
 
 export const serviceStyles = ['online', 'presencial', 'avaliacao'];

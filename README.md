@@ -24,7 +24,7 @@ profissional, quais serviços ele oferece e como contratá-lo, com um toque para
 com a mensagem pronta.
 
 **Esta é a versão pública do código.** O nome, o registro profissional, os contatos e as fotos do
-cliente foram trocados por dados e ilustrações fictícios ("Alex Duarte", `CREF 000000-G/UF`). O
+cliente foram trocados por dados e ilustrações fictícios ("Rafael Moura", com o selo "CREF verificado"). O
 código e o funcionamento são os mesmos da versão entregue.
 
 O design foi implementado a partir de um projeto no Figma, nos temas claro e escuro, pensado primeiro
