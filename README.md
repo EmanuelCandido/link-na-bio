@@ -10,9 +10,9 @@ conversa no WhatsApp, com painel de edição e métricas próprias.**
 ![Netlify](https://img.shields.io/badge/Netlify-Functions%20%2B%20Blobs-00c7b7?logo=netlify&logoColor=white)
 ![Dependências](https://img.shields.io/badge/depend%C3%AAncias%20no%20navegador-0-555)
 
-<img src="docs/media/navegacao.gif" alt="Navegação pela página no celular: destaque, serviços e menu" width="300">
-
 </div>
+
+https://github.com/user-attachments/assets/83f6a9e5-fe30-4088-8f74-a7f492a0287c
 
 ---
 
@@ -24,7 +24,8 @@ profissional, quais serviços ele oferece e como contratá-lo, com um toque para
 com a mensagem pronta.
 
 **Esta é a versão pública do código.** O nome, o registro profissional, os contatos e as fotos do
-cliente foram trocados por dados e ilustrações fictícios ("Rafael Moura", com o selo "CREF verificado"). O
+cliente foram trocados por uma persona fictícia, "Rafael Moura", com o selo "CREF verificado" no lugar
+do número do registro. As fotos são do [Unsplash](https://unsplash.com/license), de uso livre. O
 código e o funcionamento são os mesmos da versão entregue.
 
 O design foi implementado a partir de um projeto no Figma, nos temas claro e escuro, pensado primeiro
@@ -45,7 +46,11 @@ para o celular, onde está quase todo o público.
 - **Tema claro e escuro:** segue a preferência do aparelho, pode ser trocado e a escolha fica salva.
 - **Copiar e compartilhar o link** da página.
 
-▶️ [Vídeo da página no celular (WebM)](docs/media/pagina.webm)
+<img src="docs/media/navegacao.gif" alt="Navegação pela página no celular: destaque, serviços e menu" width="300">
+
+Gravação da página no celular, com a troca de tema e o menu:
+
+https://github.com/user-attachments/assets/f8cc0895-f872-4220-806d-6f7f9993f07f
 
 ## O painel de administração
 
@@ -75,7 +80,9 @@ Publicar, e cada publicação fica no **histórico** para ser restaurada.
 status do WhatsApp, QR code...) para saber de onde veio cada visita, troca de senha e gestão dos
 dados.
 
-▶️ [Vídeo do painel (WebM)](docs/media/painel.webm)
+Gravação do painel, trocando o período das métricas e editando o conteúdo com prévia ao vivo:
+
+https://github.com/user-attachments/assets/27e664a6-6adc-4567-b918-1af4818c3aa6
 
 O planejamento completo do painel está em [`docs/painel-admin.md`](docs/painel-admin.md).
 
@@ -144,4 +151,4 @@ configure:
 - Fontes: [Unbounded](https://github.com/googlefonts/unbounded) e
   [Instrument Sans](https://github.com/Instrument/instrument-sans), licença SIL OFL 1.1 (textos em
   `assets/`).
-- As ilustrações desta versão pública são fictícias e foram geradas por código.
+- Fotos da persona fictícia: [Unsplash](https://unsplash.com/license).
