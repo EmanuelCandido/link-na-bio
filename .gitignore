@@ -1,0 +1,11 @@
+.sites-runtime/
+node_modules/
+.artifacts/
+*.tar.gz
+*.tgz
+dist/
+data/
+demo-data/
+.netlify/
+netlify/generated/
+.env

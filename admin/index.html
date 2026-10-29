@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Painel | Alex Duarte</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/unbounded.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/admin/admin.css">
+  <script>
+    try {
+      const saved = localStorage.getItem('linkbio-admin-theme');
+      document.documentElement.dataset.theme = saved === 'light' || saved === 'dark' ? saved : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    } catch (_) {}
+  </script>
+  <script src="/admin/admin.js" defer></script>
+</head>
+<body>
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-logo" viewBox="0 0 64 34"><rect x="4" y="9" width="31" height="16" rx="8" fill="none" stroke="currentColor" stroke-width="5"/><rect x="29" y="9" width="31" height="16" rx="8" fill="none" stroke="currentColor" stroke-width="5"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4ZM13.5 6.5l4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"/></g></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
+    <symbol id="i-logout" viewBox="0 0 24 24"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l5-5-5-5M15 12H4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4h6v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></g></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></g></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></g></symbol>
+    <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M3 3l18 18M10.6 5.1A10 10 0 0 1 12 5c6.4 0 10 7 10 7a17 17 0 0 1-3 3.8M6.6 6.6A17 17 0 0 0 2 12s3.6 7 10 7a9.6 9.6 0 0 0 5.4-1.6M9.9 9.9a3 3 0 0 0 4.2 4.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></g></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.9-3M4 4v4h4M4 13a8 8 0 0 0 14.9 3M20 20v-4h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <!-- Acesso -->
+  <main class="auth" id="auth-view" hidden>
+    <form class="auth-card" id="auth-form" novalidate>
+      <svg class="auth-logo" viewBox="0 0 64 34" aria-hidden="true"><use href="#i-logo"/></svg>
+      <h1 id="auth-title">Entrar no painel</h1>
+      <p class="muted" id="auth-text">Digite a senha para editar a página e ver as métricas.</p>
+      <label class="field">
+        <span>Senha</span>
+        <input type="password" id="auth-password" autocomplete="current-password" required minlength="8">
+      </label>
+      <label class="field" id="auth-confirm-field" hidden>
+        <span>Confirmar senha</span>
+        <input type="password" id="auth-confirm" autocomplete="new-password" minlength="8">
+      </label>
+      <p class="form-error" id="auth-error" role="alert" hidden></p>
+      <button class="btn primary block" type="submit" id="auth-submit">Entrar</button>
+      <a class="auth-back" href="/">← Voltar para a página</a>
+    </form>
+  </main>
+
+  <!-- Painel -->
+  <div class="shell" id="shell" hidden>
+    <aside class="sidebar">
+      <a class="brand" href="#metricas" aria-label="Painel — visão geral">
+        <svg class="brand-logo" viewBox="0 0 64 34" aria-hidden="true"><use href="#i-logo"/></svg>
+      </a>
+      <nav class="nav" aria-label="Seções do painel">
+        <a href="#metricas" data-nav="metricas"><svg class="icon"><use href="#i-chart"/></svg><span>Visão geral</span></a>
+        <a href="#conteudo" data-nav="conteudo"><svg class="icon"><use href="#i-edit"/></svg><span>Conteúdo</span></a>
+        <a href="#configuracoes" data-nav="configuracoes"><svg class="icon"><use href="#i-gear"/></svg><span>Configurações</span></a>
+      </nav>
+      <div class="sidebar-foot">
+        <a class="side-link" href="/" target="_blank" rel="noopener"><svg class="icon"><use href="#i-external"/></svg><span>Ver página</span></a>
+        <button class="side-link theme-toggle" type="button"><svg class="icon moon"><use href="#i-moon"/></svg><svg class="icon sun"><use href="#i-sun"/></svg><span>Tema</span></button>
+        <button class="side-link" type="button" id="logout"><svg class="icon"><use href="#i-logout"/></svg><span>Sair</span></button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <!-- Visão geral -->
+      <section class="view" data-view="metricas" aria-labelledby="metrics-title">
+        <header class="view-head">
+          <div>
+            <h1 id="metrics-title">Visão geral</h1>
+            <p class="muted" id="compare-note"></p>
+          </div>
+          <div class="head-actions">
+            <span class="live" id="live" title="Pessoas com a página aberta nos últimos 5 minutos"><i></i><b id="live-count">0</b> agora</span>
+            <div class="segmented" role="radiogroup" aria-label="Período" id="period">
+              <button type="button" role="radio" data-period="today">Hoje</button>
+              <button type="button" role="radio" data-period="7">7 dias</button>
+              <button type="button" role="radio" data-period="30">30 dias</button>
+              <button type="button" role="radio" data-period="90">90 dias</button>
+            </div>
+            <button class="btn icon-only" type="button" id="refresh" aria-label="Atualizar métricas"><svg class="icon"><use href="#i-refresh"/></svg></button>
+            <a class="btn" id="export" download><svg class="icon"><use href="#i-download"/></svg><span>CSV</span></a>
+          </div>
+        </header>
+
+        <div class="kpis" id="kpis" aria-live="polite"></div>
+
+        <div class="grid">
+          <article class="card w-6">
+            <header class="card-head">
+              <h2>Linha do tempo</h2>
+              <div class="legend" aria-hidden="true"><span><i class="key-area"></i>Visitas</span><span><i class="key-line"></i>Cliques no WhatsApp</span></div>
+            </header>
+            <div class="chart" id="timeline"></div>
+          </article>
+
+          <article class="card w-2">
+            <header class="card-head"><h2>De onde vieram</h2></header>
+            <div class="bars" id="sources"></div>
+            <div id="campaigns-wrap" hidden>
+              <h3 class="mini-title">Campanhas</h3>
+              <div class="bars" id="campaigns"></div>
+            </div>
+          </article>
+
+          <article class="card w-2">
+            <header class="card-head"><h2>Links mais clicados</h2><div class="legend" aria-hidden="true"><span><i class="key-swatch"></i>Abre o WhatsApp</span></div></header>
+            <div class="bars" id="links"></div>
+          </article>
+
+          <article class="card w-2">
+            <header class="card-head"><div><h2>Localização</h2><p class="muted" id="location-sub" hidden></p></div>
+              <button class="btn" type="button" id="open-visits" aria-haspopup="dialog"><svg class="icon"><use href="#i-eye"/></svg><span>Detalhes</span></button>
+            </header>
+            <div class="bars" id="locations"></div>
+            <h3 class="mini-title">Dispositivos</h3>
+            <div class="stack" id="devices"></div>
+          </article>
+
+          <article class="card w-2 heat-card">
+            <header class="card-head">
+              <div><h2>Onde mais clicam</h2><p class="muted" id="heat-sub"></p></div>
+              <div class="heat-scale" aria-hidden="true"><span>menos</span><i></i><span>mais</span></div>
+            </header>
+            <div class="heat-frame" id="heat-frame">
+              <div class="heat-spacer" id="heat-spacer"></div>
+              <div class="heat-stage" id="heat-stage">
+                <iframe id="heat-iframe" title="Página com mapa de calor dos cliques" tabindex="-1"></iframe>
+                <canvas id="heat-canvas" aria-hidden="true"></canvas>
+              </div>
+            </div>
+          </article>
+
+          <article class="card w-4">
+            <header class="card-head"><h2>Horários de pico</h2></header>
+            <div class="peak-tiles" id="peak-tiles"></div>
+            <div class="peak-charts">
+              <div><h3 class="mini-title">Por hora do dia</h3><p class="chart-readout" id="hour-readout" aria-live="polite"></p><div class="hour-chart" id="hour-chart" tabindex="0" aria-describedby="hour-readout"></div></div>
+              <div id="weekday-wrap"><h3 class="mini-title">Por dia da semana</h3><div class="bars" id="weekday-bars"></div></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Conteúdo -->
+      <section class="view" data-view="conteudo" aria-labelledby="content-title" hidden>
+        <header class="view-head">
+          <div>
+            <h1 id="content-title">Conteúdo</h1>
+            <p class="muted">Nada muda na página até você publicar.</p>
+          </div>
+          <div class="head-actions">
+            <button class="btn" type="button" id="open-history"><svg class="icon"><use href="#i-history"/></svg><span>Histórico</span></button>
+            <button class="btn mobile-only" type="button" id="open-preview"><svg class="icon"><use href="#i-phone"/></svg><span>Prévia</span></button>
+          </div>
+        </header>
+
+        <div class="editor">
+          <form class="editor-form" id="editor" novalidate>
+            <details class="card section" open>
+              <summary><h2>Perfil</h2><span class="muted">Nome, foto e registro</span></summary>
+              <div class="photo-field">
+                <img id="profile-photo" alt="Foto de perfil" width="72" height="72">
+                <div>
+                  <label class="btn"><svg class="icon"><use href="#i-image"/></svg><span>Trocar foto</span><input type="file" accept="image/jpeg,image/png,image/webp" data-upload="profile" hidden></label>
+                  <p class="hint">Aparece no topo da página e no menu. JPG, PNG ou WebP até 4 MB, de preferência vertical.</p>
+                </div>
+              </div>
+              <div class="fields two">
+                <label class="field"><span>Nome</span><input data-path="profile.name" maxlength="40" required></label>
+                <label class="field"><span>Profissão</span><input data-path="profile.role" maxlength="40"></label>
+              </div>
+              <label class="field"><span>Registro profissional</span><input data-path="profile.cref" maxlength="40" placeholder="CREF 000000-G/UF"><small class="hint">Deixe vazio para esconder o selo.</small></label>
+            </details>
+
+            <details class="card section" open>
+              <summary><h2>Destaque</h2><span class="muted">A chamada sobre a foto</span></summary>
+              <div class="fields two">
+                <label class="field"><span>Linha pequena</span><input data-path="hero.kicker" maxlength="30"></label>
+                <label class="field"><span>Palavra em destaque</span><input data-path="hero.word" maxlength="14"><small class="hint">Até 8 letras cabe melhor no celular.</small></label>
+              </div>
+              <label class="field"><span>Frase de apoio</span><input data-path="hero.subtitle" maxlength="60"></label>
+            </details>
+
+            <details class="card section" open>
+              <summary><h2>Contato e redes</h2><span class="muted">WhatsApp, Instagram e TikTok</span></summary>
+              <label class="field"><span>WhatsApp</span><input data-path="contact.whatsapp" inputmode="tel" maxlength="20" placeholder="55 86 99999-9999"><small class="hint">Com DDI (55) e DDD. Só os números contam.</small></label>
+              <label class="field"><span>Mensagem padrão do WhatsApp</span><textarea data-path="contact.message" rows="3" maxlength="600"></textarea><small class="hint">Usada no ícone do topo e no botão do menu.</small></label>
+              <div class="fields two">
+                <label class="field"><span>Instagram</span><input data-path="contact.instagram" type="url" placeholder="https://www.instagram.com/usuario"></label>
+                <label class="field"><span>TikTok</span><input data-path="contact.tiktok" type="url" placeholder="https://www.tiktok.com/@usuario"><small class="hint">Vazio = o ícone não aparece.</small></label>
+              </div>
+            </details>
+
+            <details class="card section" open>
+              <summary><h2>Serviços</h2><span class="muted" id="services-count">Cartões da página</span></summary>
+              <ol class="services-list" id="services"></ol>
+              <button class="btn dashed block" type="button" id="add-service"><svg class="icon"><use href="#i-plus"/></svg><span>Adicionar serviço</span></button>
+            </details>
+
+            <details class="card section">
+              <summary><h2>Menu</h2><span class="muted">Textos do menu lateral</span></summary>
+              <div class="fields two">
+                <label class="field"><span>Título da lista</span><input data-path="menu.label" maxlength="50"></label>
+                <label class="field"><span>Botão de contato</span><input data-path="menu.cta" maxlength="40"></label>
+              </div>
+            </details>
+
+            <details class="card section">
+              <summary><h2>Google e rodapé</h2><span class="muted">Título, descrição e direitos</span></summary>
+              <label class="field"><span>Título da aba</span><input data-path="seo.title" maxlength="80"></label>
+              <label class="field"><span>Descrição para buscadores e compartilhamento</span><textarea data-path="seo.description" rows="3" maxlength="300"></textarea><small class="hint" data-count="seo.description"></small></label>
+              <label class="field"><span>Rodapé</span><input data-path="footer" maxlength="120"><small class="hint">O ano é adicionado sozinho.</small></label>
+            </details>
+          </form>
+
+          <aside class="preview" id="preview" aria-label="Prévia da página">
+            <div class="preview-bar">
+              <span class="muted">Prévia</span>
+              <div class="segmented small" role="radiogroup" aria-label="Tema da prévia" id="preview-theme">
+                <button type="button" role="radio" data-theme-option="light" aria-checked="true">Claro</button>
+                <button type="button" role="radio" data-theme-option="dark" aria-checked="false">Escuro</button>
+              </div>
+              <button class="btn icon-only mobile-only" type="button" id="close-preview" aria-label="Fechar prévia"><svg class="icon"><use href="#i-close"/></svg></button>
+            </div>
+            <div class="phone"><iframe id="preview-frame" title="Prévia da página"></iframe></div>
+          </aside>
+        </div>
+
+        <div class="savebar" id="savebar" hidden>
+          <span><i></i>Alterações não publicadas</span>
+          <button class="btn" type="button" id="discard">Descartar</button>
+          <button class="btn primary" type="button" id="publish">Publicar</button>
+        </div>
+      </section>
+
+      <!-- Configurações -->
+      <section class="view" data-view="configuracoes" aria-labelledby="settings-title" hidden>
+        <header class="view-head">
+          <h1 id="settings-title">Configurações</h1>
+        </header>
+        <div class="settings">
+          <article class="card">
+            <h2>Links de divulgação</h2>
+            <p class="muted">Um link para cada lugar de divulgação. A Visão geral passa a mostrar de onde veio cada visita.</p>
+            <div class="fields two">
+              <label class="field"><span>Onde o link vai ficar</span>
+                <select id="utm-preset">
+                  <option value="instagram|bio">Bio do Instagram</option>
+                  <option value="instagram|stories">Stories do Instagram</option>
+                  <option value="instagram|direct">Direct do Instagram</option>
+                  <option value="whatsapp|status">Status do WhatsApp</option>
+                  <option value="whatsapp|mensagem">Conversas e grupos do WhatsApp</option>
+                  <option value="tiktok|bio">Bio do TikTok</option>
+                  <option value="google|perfil">Perfil da empresa no Google</option>
+                  <option value="qrcode|impresso">QR code impresso</option>
+                </select>
+              </label>
+              <label class="field"><span>Campanha (opcional)</span><input id="utm-campaign" maxlength="40" placeholder="ex.: promo-verao"></label>
+            </div>
+            <div class="copy-row">
+              <output id="utm-output"></output>
+              <button class="btn primary" type="button" id="utm-copy"><svg class="icon"><use href="#i-copy"/></svg><span>Copiar</span></button>
+            </div>
+          </article>
+
+          <article class="card">
+            <h2>Senha</h2>
+            <p class="muted" id="password-env" hidden>Definida na variável <code>ADMIN_PASSWORD</code> do Netlify. Para trocar, altere lá e publique o site de novo.</p>
+            <form id="password-form" novalidate>
+              <label class="field"><span>Senha atual</span><input type="password" id="pw-current" autocomplete="current-password" required></label>
+              <div class="fields two">
+                <label class="field"><span>Nova senha</span><input type="password" id="pw-next" autocomplete="new-password" minlength="8" required></label>
+                <label class="field"><span>Repita a nova senha</span><input type="password" id="pw-confirm" autocomplete="new-password" minlength="8" required></label>
+              </div>
+              <p class="form-error" id="pw-error" role="alert" hidden></p>
+              <button class="btn primary" type="submit">Alterar senha</button>
+            </form>
+          </article>
+
+          <article class="card">
+            <h2>Dados das métricas</h2>
+            <p class="muted">Anônimas: sem cookies, sem IP e sem serviços de terceiros. Suas visitas com o painel aberto não contam.</p>
+            <div class="actions-row">
+              <a class="btn" href="/api/export.csv?from=0" download><svg class="icon"><use href="#i-download"/></svg><span>Exportar tudo (CSV)</span></a>
+              <button class="btn danger" type="button" id="clear-events"><svg class="icon"><use href="#i-trash"/></svg><span>Apagar métricas</span></button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Seções do painel">
+      <a href="#metricas" data-nav="metricas"><svg class="icon"><use href="#i-chart"/></svg><span>Métricas</span></a>
+      <a href="#conteudo" data-nav="conteudo"><svg class="icon"><use href="#i-edit"/></svg><span>Conteúdo</span></a>
+      <a href="#configuracoes" data-nav="configuracoes"><svg class="icon"><use href="#i-gear"/></svg><span>Ajustes</span></a>
+    </nav>
+  </div>
+
+  <dialog class="modal wide" id="visits-dialog" aria-labelledby="visits-title">
+    <header class="modal-head"><h2 id="visits-title">Visitas recentes</h2><button class="btn icon-only" type="button" data-close aria-label="Fechar"><svg class="icon"><use href="#i-close"/></svg></button></header>
+    <p class="muted">As 40 mais recentes do período. Toque numa visita para ver os cliques.</p>
+    <ol class="journeys" id="journeys"></ol>
+  </dialog>
+
+  <dialog class="modal" id="history-dialog" aria-labelledby="history-title">
+    <header class="modal-head"><h2 id="history-title">Histórico de versões</h2><button class="btn icon-only" type="button" data-close aria-label="Fechar"><svg class="icon"><use href="#i-close"/></svg></button></header>
+    <p class="muted">Restaurar carrega a versão no editor. Ela só vai para o ar quando você publicar.</p>
+    <ol class="history" id="history"></ol>
+  </dialog>
+
+  <dialog class="modal" id="confirm-dialog" aria-labelledby="confirm-title">
+    <form method="dialog">
+      <h2 id="confirm-title">Confirmar</h2>
+      <p class="muted" id="confirm-text"></p>
+      <label class="field" id="confirm-type-field" hidden><span id="confirm-type-label"></span><input id="confirm-type" autocomplete="off"></label>
+      <div class="modal-actions">
+        <button class="btn" value="cancel">Cancelar</button>
+        <button class="btn danger" value="ok" id="confirm-ok">Confirmar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
